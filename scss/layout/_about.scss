@@ -1,0 +1,68 @@
+.about-me {
+background: gray(dark);
+clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0% 100%);
+height: auto;
+
+@include mq(small) {
+min-height: 80vh;
+}
+
+@include mq(medium) {
+min-height: 80vh;
+}
+
+}
+
+.about {
+@include mq(medium) {
+display: grid;
+grid-column-gap: 1em;
+max-width: 90%;
+margin: 0 auto;
+grid-template-columns: 1fr 1fr 1fr 2fr;
+
+&__img {
+grid-column: 1 / 4;
+grid-row: 1 / 3;
+
+}
+
+&__title {
+grid-column: 2 / 4;
+grid-row: 1 / 3;
+align-self: flex-start;
+font-size: 2rem;
+
+color: $clr-red;
+text-align: left;
+
+span {
+
+}
+}
+
+&__text {
+grid-column: 4 / 5;
+grid-row: 1 / 3;
+align-self: center;
+text-align: left;
+}
+}
+
+@include mq(large) {
+width: 70%;
+ 
+
+&__title {
+font-size: 2.5rem;
+}
+}
+}
+
+.about__img {
+width: 200px;
+
+@include mq(medium) {
+width: 400px;
+}
+}

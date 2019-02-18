@@ -1,0 +1,122 @@
+.portfolio {
+ background: gray(light);
+}
+
+
+.cards {
+display: grid;
+
+
+
+@include mq(medium) {
+grid: auto-flow / repeat(3, 1fr);
+grid-column-gap: 1em;
+
+}
+}
+
+.card {
+width: 250px;
+margin: 0 auto;
+
+@include mq(medium) {
+width: 250px;
+}
+
+@include mq(large) {
+width: 350px;
+}   
+
+
+
+}
+
+.card__content {
+padding: 11em 1em;
+background: gray(light);
+transform-style: preserve-3d;
+transition: transform 3s;
+position: relative;
+margin-bottom: 1em;
+box-shadow: $box-shadow;
+
+
+.card:hover & {
+transform: rotateY(.5turn);
+}
+}
+
+.card__front, .card__back {
+transform-style: preserve-3d;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+backface-visibility: hidden;
+
+}
+
+.card__front {
+background: gray(dark);
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: 4px solid $clr-red;
+
+}
+
+.card__title {
+font-size: 2rem;
+display: inline-block;
+@include line;
+transform: translateZ(1em);
+
+}
+
+.card__subtitle {
+transform: translateZ(1em);
+}
+
+.accent {
+background: gray(light);
+border: 4px solid $clr-red;
+
+.card__title {
+color: $clr-red;
+}
+}
+
+.card__back {
+transform: rotateY(.5turn);
+display: flex;
+
+}
+.back__button, .front__button {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+
+.primary-back {
+background-image: url(../img/culinarycard.png);
+background-position: center;
+background-size: cover;
+}
+
+.accent-back {
+background-image: url(../img/birdscard.png);
+background-position: center;
+background-size: cover;
+}
+
+.third-back {
+background-image: url(../img/cabincard.png);
+background-position: center;
+background-size: cover;
+}
+
+

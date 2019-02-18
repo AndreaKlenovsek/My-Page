@@ -1,0 +1,4 @@
+@function gray($shade) {
+$value: map-get($greys, $shade);
+@return $value;
+}
