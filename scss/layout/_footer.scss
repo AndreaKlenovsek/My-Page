@@ -1,19 +1,20 @@
 .footer {
 background: $clr-red;
 margin-top: -10vw;
-min-height: 40vh;
+min-height: 30vh;
 margin-bottom: 3em;
 display: grid;
-justify-content: flex-end;
+justify-content: center;
 
-p {
+&__text {
 align-self: flex-end;
 max-width: 60%;
 margin: 0 auto;
 margin-top: 8em;
 color: gray(dark);
 
-}
+
+@include line($width: 40%, $height: 1px, $size: 1em, $bg: rgba(gray(dark), .4)); 
 }
 
 .social {
@@ -26,11 +27,11 @@ margin: 0 auto;
 & i {
 color: gray(dark);
 font-size: 1.5rem;
-padding: 2em 1em;
+padding: 1em 1em;
 transition: transform 350ms;
 
-@include mq(small) {
-padding: 2em 3em;
+@include mq(medium) {
+padding: 1.5em 3em;
 }
 
 
@@ -39,3 +40,9 @@ transform: scale(1.2);
 }
 }
 }
+
+.made p {
+margin: 0 auto;
+color: darken($clr-red, 10);
+
+}}

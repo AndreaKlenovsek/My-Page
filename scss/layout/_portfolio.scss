@@ -41,7 +41,8 @@ margin-bottom: 1em;
 box-shadow: $box-shadow;
 
 
-.card:hover & {
+.card:hover &,
+.card:focus & {
 transform: rotateY(.5turn);
 }
 }
@@ -98,6 +99,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
+z-index: 1000;
 }
 
 

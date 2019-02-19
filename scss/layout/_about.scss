@@ -11,7 +11,16 @@ min-height: 80vh;
 min-height: 80vh;
 }
 
+h2 {
+@include line;
 }
+
+p {
+padding: 1em 1em;
+}
+}
+
+
 
 .about {
 @include mq(medium) {

@@ -39,14 +39,15 @@ margin: 0 auto;
 
 // Pseudo
 
-@mixin line ($bg: currentColor) {
+@mixin line ($bg: currentColor, $height: 2px, $width: 100%, $size: .2em) {
 &::after {
 content: '';
-width: 100%;
-height: 2px;
+width: $width;
+height: $height;
 background: $bg;
 display: block;
-margin: .3em auto;
+margin: $size auto;
+
 
 }
 }

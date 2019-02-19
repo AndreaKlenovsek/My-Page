@@ -1,26 +1,54 @@
 .hero {
 height: 80vh;
-background-image: url(../img/hero14.png);
+background-image: url(../img/hero15.png);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-display: flex;
-justify-content: flex-start;
+display: grid;
+place-items: center;
 
 
 &__title {
-padding: 1.8em 1em;
-font-size: 3rem;
-color: $clr-white;
+padding: 1.2em 1em;
+font-size: 1.5rem;
+color: gray(light);
 font-family: $ff-merienda;
+letter-spacing: 2px;
+
+@include mq(small) {
+font-size: 2.2rem;
+
+}
 
 span {
 display: block;
 position: relative;
-left: 2em;
-padding-top: 0.4em;
 text-transform: uppercase;
-color: $clr-red;
+color: gray(dark);
+font-size: 2rem;
+
+@include mq(small) {
+font-size: 3rem;
+    
+    }
 }
+}
+}
+
+.button-main {
+color: gray(dark);
+padding: .8em 2em;
+text-decoration: none;
+text-transform: uppercase;
+border: 2px solid gray(dark);
+font-family: $ff-alegreya;
+
+letter-spacing: 2px;
+align-self: flex-start;
+
+&:hover {
+border: 1px solid gray(dark);
+background: rgba(gray(light), .3);
+color: gray(dark);
 }
 }
