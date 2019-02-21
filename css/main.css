@@ -166,19 +166,25 @@ nav a:hover {
 }
 
 .button-main {
-  color: #1A1A1A;
-  padding: 0.8em 2em;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 2px solid #1A1A1A;
-  font-family: "Alegreya SC", serif;
-  letter-spacing: 2px;
-  align-self: flex-start;
+  display: none;
 }
-.button-main:hover {
-  border: 1px solid #1A1A1A;
-  background: rgba(226, 226, 226, 0.3);
-  color: #1A1A1A;
+@media (min-width: 450px) {
+  .button-main {
+    display: inline-block;
+    color: #1A1A1A;
+    padding: 0.8em 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #1A1A1A;
+    font-family: "Alegreya SC", serif;
+    letter-spacing: 2px;
+    align-self: flex-start;
+  }
+  .button-main:hover {
+    border: 1px solid #1A1A1A;
+    background: rgba(226, 226, 226, 0.3);
+    color: #1A1A1A;
+  }
 }
 
 .portfolio {

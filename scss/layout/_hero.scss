@@ -38,6 +38,9 @@ font-size: 3rem;
 }
 
 .button-main {
+display: none;
+@include mq(small) {
+display: inline-block;
 color: gray(dark);
 padding: .8em 2em;
 text-decoration: none;
@@ -52,5 +55,6 @@ align-self: flex-start;
 border: 1px solid gray(dark);
 background: rgba(gray(light), .3);
 color: gray(dark);
+}
 }
 }
