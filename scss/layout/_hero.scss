@@ -14,9 +14,11 @@ font-size: 1.5rem;
 color: gray(light);
 font-family: $ff-merienda;
 letter-spacing: 2px;
+margin-top: 3em;
 
 @include mq(small) {
 font-size: 2.2rem;
+margin-top: 0;
 
 }
 
