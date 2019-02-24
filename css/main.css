@@ -311,6 +311,12 @@ nav a:hover {
   background-size: cover;
 }
 
+.fifth-back {
+  background-image: url(../img/eco.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .about-me {
   background: #1A1A1A;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0% 100%);
